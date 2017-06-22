@@ -1,0 +1,87 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+"Not trusting file.." on pull
+
+Alexis S. L. Carvalho alexis at cecm.usp.br 
+Tue Oct 31 23:37:40 CST 2006
+Previous message: "Not trusting file.." on pull
+Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+Thus spake TK Soh:
+> I am getting this message (edited to mask user and path) when trying
+> to pull using the recent crew revision
+> 
+>  % hg pull
+>  Not trusting file /remote/repo/.hg/hgrc from untrusted user me, group 
+>  mygroup
+
+> What is he "Not trusting file.." message trying to tell us?
+
+Mercurial obviously uses some settings from the .hg/hgrc file from a
+repo.  Some of these settings could be (ab)used by the owner of a repo
+to trick the user running hg into executing some arbitrary code.  For
+example, when you pull, the "outgoing" hook is executed automatically.
+
+Up to 0.9.1, most (all?) of these problems would appear only if you
+actively interacted with the repo (i.e. used pull, push, incoming,
+outgoing, commit, email, etc), but current tip will automatically load
+extensions specified in .hg/hgrc files[1] for all commands that open the
+repository.  This means that a simple "hg paths" could lead to arbitrary
+code execution.
+
+To prevent this, hg looks up the owner and the group of a .hg/hgrc file
+before loading it.  If it doesn't trust this user/group, it doesn't use
+the settings from this file[2].
+
+You can tell that you trust some user/group by adding something like
+this to ~/.hgrc:
+
+[trusted]
+users = foo, bar, baz
+groups = fred, barney
+
+(use "*" if you want to trust all users/groups)
+
+Now, the user running hg should always be trusted.  If the
+/remote/repo/.hg/hgrc file does belong to you, you may have hit a bug
+:-/ .  In this case, can you put the next few lines in a file and
+execute it (after fixing the '/remote/repo/.hg/hgrc', of course)?
+
+- --x--
+#!/usr/bin/env python
+import os
+import pwd
+
+print 'my name:', pwd.getpwuid(os.getuid())[0]
+st = os.stat('/remote/repo/.hg/hgrc')
+print 'file owner:', pwd.getpwuid(st.st_uid)[0]
+- --x--
+
+Some additional info about your setup would also be interesting (is the
+/remote/repo on NFS, are you using NIS, LDAP, ...).
+
+Alexis
+
+[1] - the extension is loaded only after parsing the command line, so
+you still can't use commands defined by this extension.  IOW, this is
+useful for e.g. the notify extension, but not for mq.
+
+[2] - right now, the only exception is hgweb, since it's common to run
+the CGI script as one user, serving repos from other users.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBCgAGBQJQiaWwAAoJEL/8jdPAbdawo6EQALFFC1C1TB0ugrGi0vYsn+k/
+Xamn8abuBqgErkj972vkMqk7vfrtDjEodqWKkKDG7QIUA28V7g5pbvVcPPhVFucq
+nskOnReI9fyCX6WZxoreNm3jTPfXB4GEotHAHiPlr5l0wVWyKI4TOJBTY2gofBTP
+kDe3Vx0biDn/uKwqj+LoENAItcuLd9Jj7vMbgK9UAtApY/DgvrsgUK1pxctHbBWs
+T5F14ptUz8pqIarPXD6vQ0r//4ekh0A/6jDe6YHoqmwp/UGHTA7KkgUC7vHyXQ2z
+V+uhHXyw6qFeUpyWAXwRcVithGOkSjpadQG5D3Zl85oHSr221ZqbsNym9hh0PT42
+vzJu+2XN/Y+P5yooTeD640OCPZK/qmjHGyYWoyVGb3S2PwVpg8QKPHufKCyflFYQ
+GaaPJ8TwCMNZBV/eYvIyvDukFfnmTI1Dztxd1hUjQhMPA6OlesQCph/YBjFycDXC
+4xzKqp4s42csz2XRGMMNPtex8eheum7b9ommW/6QjKWfyjIQOC8jaHct4/6KcX3e
+sem28NOOzBfzp4keWNf2R219W/ZSFZuGCPUz8o+aHDNhuBZpxSy57XICr9Hwr7Xe
+OLPYgtjBX9zpAuqmf9syP3owCwy3awTuJ8oiY+ahX0B36tUAInpB5vMYxNiqpMY5
+3b4TuEnqRmktj3SkzK+e
+=mo0F
+-----END PGP SIGNATURE-----
