@@ -1,0 +1,87 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+This policy is valid for all signatures made by the following GnuPG keys:
+=========================================================================
+Thejesh GN <i@thejeshgn.com>
+Fingerprint: C7D4 1911 9893 ADAF 27B0 FCAA BFFC 8DD3 C06D D6B0
+
+
+Location:
+=========
+I live in Bangalore, India. and I am open to sign keys at any time. The easiest way 
+for verifying keys would be to meet me here in Bangalore. Another opportunity to get 
+in personal contact would be to address me at certain computer related confs 
+(FOSS.in, DroidCon etc). I am also listed at biglumber.com, a webpage about key 
+signing coordination.
+
+Prerequisites for signing:
+==========================
+The signee (the key owner who wishes to obtain a signature to his/her key from me, 
+the signer) must make his/her OpenPGP key available on a publicly accessible keyserver 
+(like http://keyserver.ubuntu.com).
+
+The signee must prove his/her identity to me by way of a valid identity card or a 
+valid driving licence. These documents must feature a photographic picture of the 
+signee. No other kind of documents will be accepted. This also implies that the signee's 
+key must feature his/her real name in order to be checked up on his/her identity card. 
+
+The signee should have prepared a strip of paper with a printout of the output
+
+  gpg --fingerprint 0x12345678
+
+
+(or an equivalent command if the signee does not use GnuPG) where 0x12345678 is the key 
+ID of the key which is to be signed.
+
+The act of signing:
+===================
+After having received (or exchanged) the proof detailed in the above I will sign the
+signee's piece of paper myself to avoid fraud.
+
+At home I will sign the UIDs which I was asked to sign. Each signature will then be 
+mailed separately to the corresponding mail address of the single UIDs.
+
+The following paragraphs describe the procedure, preconditions and possible results of 
+me signing data or keys.
+
+Key Signing
+===========
+
+Level 3
+This level will only be given to people I know long enough to be absolutely sure of 
+their identity. Mostly friends, family and long term co-workers will receive this level 
+of signature.
+
+Level 2
+I have met the signee, I have verified his/her identity card and fingerprint and I was 
+able to send my signatures encrypted with the corresponding key of the signee. 
+
+Level 1
+A level of 1 will never be used by me for it weakens the web of trust in my opinion. I 
+have never signed keys without appropriate verification and I will never do so in the 
+future.
+
+Level 0
+A level of 0 is given to keys of Certification Authorities since in most cases the key 
+owner is a whole organization and not a single person. Usually the fingerprints of those
+keys have to be verified by getting them from the corresponding website of the CA and 
+cannot be checked by exchange with a member of the CA who is in charge. These signatures 
+are the weakest in my web of trust.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBCgAGBQJQlXkhAAoJEL/8jdPAbdawEhkP/3Sl8dMEYQvDNaxHLGBuNvCa
+n+CCzaB4cVDuUtg2RrkwGI43GQsRj0bOcQsLJSP/b9jVdtl9KncJuhsCSohALgNM
+40q7Qu1bFmEfQT3EI+rsnA4g4AU1YMu1pXOg4KQfMxO5SPgnqaNCJO9IKVw0n5q6
+ne8/O4nPQ8aCruu5oHiAVJ5xRE5yTuEyhgd1iUPqCFDIgBSGGbBV8D18vuwgXLkd
+QVVPlfSvZyg+NvEi0+g487DeV15PAJV5GZ1d5/7r14iCInCdpr/Zmcwhf1oRe/rF
+Fng30vdfXIbLG7VmMxbmntvmWfY5+YTioca5fOEpDM4sdN1VrYZ7deu0qSXhhnlC
+Z/8nOb8l5xMvRBbYYZVEYY3NHdHWYKelG5Wsavh2D/b4jKiwmXiVZvNAn/U4A86V
+WZVHMIXaYzfEAzVn9doXQQNNrv0xVGG150n9qvBo3q32GiwytKZf9LajhHQy/2Uv
+jJfqffSx2DmbiONRRmr7yYT2MSt1+a5767g6LKXQ4OQgeSuzLt8GNIioHLPbX+Ln
+5SDD340JRLiqZ7uoPnvppD628plGOyaeF3zx5FqXXOfPOHppi68QHD7wogk6eE4i
+lOVb5VThd8Mmsw20oiaJkwPA2AhFwzyyfacE7byS9S/QMXhy4n7j5v6JUhw/DL3g
+AbXVDJmRabzzg65+luPd
+=IrFi
+-----END PGP SIGNATURE-----
