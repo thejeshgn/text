@@ -6,7 +6,7 @@ and also as a git repository http://github.com/thejeshgn/text
 My GPG:
 
 Thejesh GN <i@thejeshgn.com>
-GPG keys are at : http://text.thejeshgn.com/BFFC8DD3C06DD6B0.txt
+GPG keys are at : https://text.thejeshgn.com/BFFC8DD3C06DD6B0.txt
 Fingerprint: C7D4 1911 9893 ADAF 27B0 FCAA BFFC 8DD3 C06D D6B0
 
 How to validate :
