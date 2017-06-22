@@ -1,0 +1,73 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+#What happens?
+    We're going to install and use
+
+    Computer:
+        1. BIOS and Boot password
+        2. OS password
+        3. TrueCrypt volumes
+        4. Home Directory Encryption (Ubuntu)
+        5. Anti Virus software and Anti Spyware
+        6. Firewall Software
+        7. Boot drive integraty
+    Email/IM:
+        8. GPG
+        9. OTR
+        10. Two factor Authentication (Gmail)
+    Browsing:
+        11. https
+        12. VPN
+        13. TOR
+        14. PasswordSafe/1 password    
+
+We focus on Linux but most of these things should work with Windows/Mac too.
+
+    
+#Where?
+    Location:
+        No 68, KH Double Road
+        Opp. Corporation Bank
+        Opp to the K H Road Bus Stand (Double Road, Shantinagr bus stand)
+        Bangalore - 560027. INDIA     
+    Web:
+        http://jaaga.in
+    Map:
+        http://l.giyf.in/jaaga_blr
+
+#Hosts? 
+    Thejesh GN
+    Send me a mail if you want to help me
+
+#When?
+   Sometime in September. We probably need 4 hours.
+
+#Bring?
+    Your Laptop or PC (Update to latest stable version and install all security passwords)
+
+#links
+https://crypto.is/
+https://torproject.org/
+http://www.gnupg.org/
+http://www.truecrypt.org/
+http://www.cypherpunks.ca/otr/
+https://tails.boum.org/
+http://aide.sourceforge.net/
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBCgAGBQJQQiL7AAoJEL/8jdPAbdawMtsP/iBWBAZpPrNaAyIyj7ZsyJgl
+XA1ISFTW6Qf+WqibAjrFArNOaodfwIfADFfF4ajAoj23BDFcrCDqgTrXL2W+e1GU
+4sr/Xi/LdUw708XMuOfpOCd5M3lP/+d4l2beSxiLyzX5xcm0Q4KHnPFqXp+X3sR+
+TioKmDqWuu5RT3vk2y6sdgFVRBx7HNyECHMtBaKSXwTLSx0sakUjnV+xLqAN1qLQ
+b8s8hzOjgI4sDthureyfubgU/aaaTBXBowLtXoPLQyA1FnaZqT+gmd/0c+PrDx8l
+lMtHEzkhmTYhjCgDUqqrS2Z8XOt+YFWVPumgj5Cqs6ll+jCst9vuQrVD6HIxTjPg
+wALgqD3uZ9jhlZN5hkuTl+vLEs7Z+72I90v0DTfWr3fFnTcpnmvE+L2TyfVCjZRy
+utnkQsgUzxiv6H0Sb9Gfvd7yj3e43etNY1bFdwsWAqni5xkyNSezFNJcFOr0cN9P
+IhwTI3xVYslmEvVcGYEfg8reTc3k/H0wY8d1GHl8ameUi3vn2OKS4u/9Am6uKNHt
+JYwSoOdfT/S4ipIFA4V07dR4pEGXIglXs2Zf/JCrbmKwrNjTeX54U9xoavcP1kXZ
+DtOTCEma7fGAMryTQ0f4O8Njh6dVeCUl5Y7VIS909Z+eeMzbLXFldbBDtkxCIVLh
+NXf+hfp+xbtLUk09lzAf
+=2nAH
+-----END PGP SIGNATURE-----
