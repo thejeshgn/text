@@ -1,0 +1,18 @@
+
+Your connection is not secure
+
+The owner of www.facebook.com has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.
+
+This site uses HTTP Strict Transport Security (HSTS) to specify that Firefox may only connect to it securely. As a result, it is not possible to add an exception for this certificate.
+
+Learn more…
+
+Report errors like this to help Mozilla identify and block malicious sites
+
+www.facebook.com uses an invalid security certificate.
+
+The certificate is not trusted because the issuer certificate is unknown.
+The server might not be sending the appropriate intermediate certificates.
+An additional root certificate may need to be imported.
+
+Error code: SEC_ERROR_UNKNOWN_ISSUER
